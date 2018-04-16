@@ -11,6 +11,7 @@ cf target -s review
 cf create-service ${MYSQL_SERVICE_NAME} ${PLAN_NAME} tracker-database
 cf target -s production
 cf create-service ${MYSQL_SERVICE_NAME} ${PLAN_NAME} tracker-database
+cf create-service p-service-registry standard tracker-service-registry
 cf target -s review
 cf bind-service pal-tracker tracker-database
 cf target -s production
