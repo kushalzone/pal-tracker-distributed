@@ -7,6 +7,9 @@ PIVOTAL Platform  Acceleration Lab - Sessions.
 ====CLOUD FOUNDRY====
 cf login -a api.run.pivotal.io
 cf push
+cf push -f manifest-registration.yml
+cf marketplace
+cf services
 cf target -s review
 cf create-service ${MYSQL_SERVICE_NAME} ${PLAN_NAME} tracker-database
 cf target -s production
