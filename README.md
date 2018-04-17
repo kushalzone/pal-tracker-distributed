@@ -21,6 +21,11 @@ cf target -s production
 cf bind-service pal-tracker tracker-database
 cf create-space review
 cf create-space production
+cf restart moviefun
+cf bind-service moviefun movies-mysql
+cf restage moviefun
+cf apps
+cf logout
 
 ====FLYWAY COMMANDS====
 flyway -url="jdbc:mysql://localhost:3306/tracker_dev" -locations=filesystem:databases/tracker clean migrate
