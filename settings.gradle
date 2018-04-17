@@ -1,7 +1,5 @@
 rootProject.name = "pal-tracker-distributed"
 
-include "platform-services:eureka-server"
-
 include "applications:allocations-server"
 include "applications:backlog-server"
 include "applications:registration-server"
@@ -23,3 +21,5 @@ include "databases:registration-database"
 include "databases:timesheets-database"
 
 include "integration-test"
+
+include "platform-services:eureka-server"
