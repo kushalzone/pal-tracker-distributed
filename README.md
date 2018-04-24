@@ -37,6 +37,7 @@ apt search PACKAGE
 sudo apt install git
 brew install cloudfoundry/tap/cf-cli
 !4 (Runs the 4th command from history)
+mkdir -p databases/{album,movie}-database/src/main/resources/db/migration
 
 
 ====GRADLE COMMANDS====
