@@ -27,6 +27,8 @@ cf restage moviefun
 cf apps
 cf logout
 cf create-service p-config-server standard movie-fun-config -c config-server.json
+cf ssh -N -L 63306:192.168.16.98:3306 album-service-9
+cf ssh -N -L 63306:192.168.16.98:3306 movie-service-9
 
 ====FLYWAY COMMANDS====
 flyway -url="jdbc:mysql://localhost:3306/tracker_dev" -locations=filesystem:databases/tracker clean migrate
