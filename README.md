@@ -26,6 +26,7 @@ cf bind-service moviefun movies-mysql
 cf restage moviefun
 cf apps
 cf logout
+cf create-service p-config-server standard movie-fun-config -c config-server.json
 
 ====FLYWAY COMMANDS====
 flyway -url="jdbc:mysql://localhost:3306/tracker_dev" -locations=filesystem:databases/tracker clean migrate
